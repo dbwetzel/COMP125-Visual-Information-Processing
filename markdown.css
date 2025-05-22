@@ -15,7 +15,7 @@
 
   /* Headings use a different font because they’re hipsters. */
   h1,
-  h2 {
+  h2, h3 {
     color: var(--color-gray-dark);
     font-size: 110%;
     line-height: 1.1;

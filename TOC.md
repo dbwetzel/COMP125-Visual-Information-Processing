@@ -9,7 +9,7 @@ This is an introductory course in programming using the JavaScript library P5. C
     * Why Learn Coding and/or Programming?
     * Hello P5!
     * Setup (before you begin)
-        * Lab 0 - Setup
+        * [Lab 0 - Setup](labs/lab_0.html)
     * Draw (basic shapes on a web canvas)
         * lab 1 - Draw
 2. Some Basic Programming Techniques
