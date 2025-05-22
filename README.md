@@ -1,4 +1,4 @@
-<link href="style.css" rel="stylesheet"></link> 
+<link href="markdown.css" rel="stylesheet"></link> 
 
 ## COMP125 Visual Information Processing
 *Learning materials and examples for an introductory course in programming with P5.js*
