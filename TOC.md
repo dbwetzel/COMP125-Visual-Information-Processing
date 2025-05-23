@@ -9,44 +9,53 @@ This is an introductory course in programming using the JavaScript library P5. C
     * Why Learn Coding and/or Programming?
     * Hello P5!
     * Setup (before you begin)
-        * [Lab 0 - Setup](labs/lab_0.html)
     * Draw (basic shapes on a web canvas)
-        * lab 1 - Draw
+    * Assignments:
+        * [Lab 0 - Setup](labs/lab_0.html)
+        * [lab 1 - Draw](labs/lab_1.html)
 2. Some Basic Programming Techniques
     * Javascript syntax and program structure
     * Variables & Data
-        * lab 2 - variables
     * Conditional Statements & Interaction
-        * lab 3 - interaction
     * Loops
-        * lab 4 - for loop
+    * Assignments:
+        * [lab 2 - variables](labs/lab_2.html)
+        * [lab 3 - interaction](labs/lab_3.html)
+        * [lab 4 - for loop](labs/lab_4.html)
+        * [Project 1 - Sprite Image]    
 3. Designing a "Sprite" in P5
     * Matrix layers with `push()` and `pop()`
     * Translation - repositioning a complex image on the canvas
-        * lab 5 - translation
     * Rotation and Scaling
     * Motion
-        * lab 6 - motion
+    * Assignments:
+        * [lab 5 - translation](labs/lab_5.html)
+        * [lab 6 - motion](labs/lab_6.html)
+        * [Project 1 - Sprite Image]    
 4. Make it interesting with extra features
     * Text
     * Images
     * Sounds
-        * lab 7 - text, images, and sound
+    * Assignments:
+        * [lab 7 - text, images, and sound](labs/lab_7.html)
 5. Encapsulation
     * Funcitons
-        * lab 8 - functions
     * Objects
-        * lab 9 - object instances
     * Classes and Constructors
-        * lab 10 - object methods
     * Your Sprite as an Object
+    * Assignments:
+        * [lab 8 - functions](labs/lab_8.html)
+        * [lab 9 - object instances](labs/lab_9.html)
+        * [lab 10 - object methods](labs/lab_10.html)
+        * [Project 2 - Array of Objects]
 6. Arrays & Data
     * Simple lists of items
     * Accessing and Processing External Data
     * Iterating through a list
-    * Arrays of Objects
-        * lab 11 - adding objects to an array
-    * Array of Sprites on the Canvas
+    * Array of Sprite objects on the Canvas
+    * Assignments:
+        * [lab 11 - adding objects to an array](labs/lab_11.html)
+        * [Project 2 - Array of Objects]
 7. Creative Programming - a 2D Web Game
     * Problem Solving with Algorithms
     * Game Template
