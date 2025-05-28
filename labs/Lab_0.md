@@ -1,12 +1,14 @@
 <link href="../markdown.css" rel="stylesheet"></link> 
 
-## Lab 0 - Getting Started with P5.js
+## Lab 0 - Hello P5.js!
 
 *This "Lab" is for participation/engagement credit*
 
 The purpose of this lab is to get you up and running as soon as possible. I have created lab and project templates in the P5 editor. All you need to do is open it and save it to your own account.
 
-In P5.js, we will refer to your program as a "sketch." A sketch is a JavaScript file (.js) linked to a web page (.html). The sketch file is where we will add code that draws images and controls animations with the P5 library.
+In most programming classes, your first assignment would be to write a program that produces the phrase **"Hello, World!"** on the screen. In this class, our equivalent to the traditional "Hello World" assignment will be to draw a circle on the canvas in your browser. 
+
+In P5.js, we will refer to your program as a **"sketch."** A sketch is a JavaScript file (.js) linked to a web page (.html). The sketch file is where we will add code that draws images and controls animations with the P5 library.
 
 To return to your homework later, make sure you save it and then go to "My Sketches" in the top right dropdown menu (under your user name).
 
