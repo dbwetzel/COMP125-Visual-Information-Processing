@@ -10,13 +10,15 @@ Use this link to get started:
 
 In the first Lab, you created a new P5.js sketch. Credit for that lab is awarded for successfully linking a web page (index.html) to the P5.js code library and adding some JavaScript code to a connected script file (script.js). For some of you, that might have been a leap of faith already.
 
-Now it's time to actually write some original code that will generate your own graphics in a browser window! You should carefully read Chapter 3 - Draw in McCarthy, et al: Make: Getting Started with P5.js. Consider using this lab as a place to try out some of the examples in chapter 3.
+Now it's time to actually write some original code that will generate your own graphics in a browser window! You should carefully read **Chapter 3 - Draw** in McCarthy, et al: *Make: Getting Started with P5.js.* Consider using this lab as a place to try out some of the examples in chapter 3.
 
-Edit the file "script.js" to create something original.
+In the sketch file explorer (left side '>'), edit the file "script.js" to create something original with code.
 
-**NOTE:** In your script, there should be only one instance of setup() and only one instance of draw()!
+Try to draw something interesting (a character? animal? object?) using basic P5 shape functions. Think about coordinates on the canvas as numbers in pixels (0, 0 is the top left corner). Again, see chapter 3 of the textbook for ideas and details. Maybe start with a simple shape and see how it goes. Add to it gradually, one shape at a time, and always test your work by running the sketch to see how it looks. You should get used to some trial and error. That's how programming works!
 
-This lab is worth 10 points, allocated according to the following criteria/rubric:
+**NOTE:** In your script, there should be only one instance of `setup()` and only one instance of `draw()`!
+
+This lab is worth **10 points**, allocated according to the following criteria/rubric:
 
 **1 - 4 points:** Generate at least four different shapes, using at least three of the following basic shape functions:
 ``` javascript
@@ -26,6 +28,8 @@ This lab is worth 10 points, allocated according to the following criteria/rubri
     ellipse()
     triangle()
 ```
+Each P5 shape function has slightly differnt requirements. If you are confused, you can always check the <a href="https://p5js.org/reference/" target="_blank">P5 reference</a> for examples and detailed explanations.
+
 **1 - 3 points:** Apply color, line weighting, and advanced shape techniques with at least three of the following:
 ``` javascript
     fill()
