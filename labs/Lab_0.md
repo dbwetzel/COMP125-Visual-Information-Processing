@@ -10,7 +10,7 @@ In P5.js, we will refer to your program as a "sketch." A sketch is a JavaScript 
 
 To return to your homework later, make sure you save it and then go to "My Sketches" in the top right dropdown menu (under your user name).
 
-**Create an account**, or **log in** to your account, at [editor.p5js.org](editor.p5js.org). Then click the link below to get started:
+**Create an account**, or **log in** to your account, at <a href="editor.p5js.org" target="_blank">editor.p5js.org</a>. Then click the link below to get started:
 
 * <a href="https://editor.p5js.org/dbwetzel/sketches/SN87Rrjmc" target="_blank">https://editor.p5js.org/dbwetzel/sketches/SN87Rrjmc</a>
 
