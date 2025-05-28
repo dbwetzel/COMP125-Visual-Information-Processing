@@ -13,15 +13,11 @@ In this lab, you will add some simple P5 functions to the sketch that will draw 
 ### coding instructions
 
 1. **Explore your project.** Look at the "files" list for your sketch (click the '>' under the play/run button to open the file browser sidebar). You should see two essential files for this project (viewable as a web page): index.html and sketch.js. To complete this lab, you will edit each of these files a little bit ...
-
 2. **Link your project** to the P5.js Code Library (Don't worry if that doesn't mean anything to you yet). Click on the link for "index.html." Copy and paste the following code block into index.html at line 5:
-
 ``` html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.js"></script>
 ```
-
 3. **Prove that it works.** Press the "Play/Run" button. You should see a gray square "canvas" in the right-hand "preview" window
-
 4. **Draw something on the Canvas.** Open and edit sketch.js. Add the following two lines of code, starting at line 7 (inside the `draw()` function):
 ``` javascript
   fill(0);
