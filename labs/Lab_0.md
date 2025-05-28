@@ -4,21 +4,31 @@
 
 *This "Lab" is for participation/engagement credit*
 
-Create an account, or log in to your account, at [editor.p5js.org](editor.p5js.org). Then click the link below to get started:
+The purpose of this lab is to get you up and running as soon as possible. I have created lab and project templates in the P5 editor. All you need to do is open it and save it to your own account.
 
-* https://editor.p5js.org/dbwetzel/sketches/SN87Rrjmc
+In P5.js, we will refer to your program as a "sketch." A sketch is a JavaScript file (.js) linked to a web page (.html). The sketch file is where we will add code that draws images and controls animations with the P5 library.
+
+To return to your homework later, make sure you save it and then go to "My Sketches" in the top right dropdown menu (under your user name).
+
+**Create an account**, or **log in** to your account, at [editor.p5js.org](editor.p5js.org). Then click the link below to get started:
+
+* <a href="https://editor.p5js.org/dbwetzel/sketches/SN87Rrjmc" target="_blank">https://editor.p5js.org/dbwetzel/sketches/SN87Rrjmc</a>
 
 In this lab, you will add some simple P5 functions to the sketch that will draw shapes in the P5 canvas. Once you have done that, submit your sketch files and a link for course credit.
 
 ### coding instructions
 
-1. **Explore your project.** Look at the "files" list for your sketch (click the '>' under the play/run button to open the file browser sidebar). You should see two essential files for this project (viewable as a web page): index.html and sketch.js. To complete this lab, you will edit each of these files a little bit ...
-2. **Link your project** to the P5.js Code Library (Don't worry if that doesn't mean anything to you yet). Click on the link for "index.html." Copy and paste the following code block into index.html at line 5:
+1. **Save** your own copy. The P5 editor has its own menus. Look for "File" and choose "Duplicate" (**File->Duplicate**) to make a copy of the assignment in your own account. Look at the title of the sketch ("COMP 125 Lab 0 - Getting Started with P5"). Does it still say "by dbwetzel" or does it have your own user name listed as the author? If you're listed as the author, then you're ready to start coding! You can find your work later by loggin in and looking at the top right corner where is says "Hello, ___!" and choose "My Sketches" from the drop-down menu.
+
+2. **Explore your project.** Look at the "files" list for your sketch (click the '>' under the play/run button to open the file browser sidebar). You should see two essential files for this project (viewable as a web page): index.html and sketch.js. To complete this lab, you will edit each of these files a little bit.
+
+3. **Link your project** to the P5.js Code Library (Don't worry if that doesn't mean anything to you yet). Click on the link for "index.html." Copy and paste the following code block into index.html at line 5:
 ``` html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.js"></script>
 ```
-3. **Prove that it works.** Press the "Play/Run" button. You should see a gray square "canvas" in the right-hand "preview" window
-4. **Draw something on the Canvas.** Open and edit sketch.js. Add the following two lines of code, starting at line 7 (inside the `draw()` function):
+4. **Prove that it works.** Press the "Play/Run" button. You should see a gray square "canvas" in the right-hand "preview" window
+
+5. **Draw something on the Canvas.** Open and edit sketch.js. Add the following two lines of code, starting at line 7 (inside the `draw()` function):
 ``` javascript
   fill(0);
   ellipse(50, 50, 50, 50);
@@ -32,9 +42,5 @@ function draw() {
 }
 ```
 
-5. **Run your sketch.** You should see a black circle in the upper left corner of the gray canvas.
+6. **Run your sketch.** You should see a black circle in the upper left corner of the gray canvas.
 
-6. **Submit your work:**
-    * Download your code from the editor as a ".zip" file (File->Download)
-    * Submit that .zip archive file as an attachment to the Sakai assignment submission (it will probably be in your "Downloads" folder)
-    * Share a link to your sketch in the Sakai comments (**important!**). In the P5 editor, go to File->Share and click the "Edit" link to copy it to the clipboard. Paste that link into the comments before submitting

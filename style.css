@@ -16,7 +16,7 @@
 
 html, body {
   margin: .5rem;
-  padding: .5rem;
+  padding: 3rem;
   background-color: var(--color-gray-medium);
 }
 canvas {
@@ -30,7 +30,7 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 18px;
   line-height: 1.2;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 

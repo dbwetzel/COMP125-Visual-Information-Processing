@@ -44,7 +44,9 @@
   a:hover :active :visited {
     color: rgb(64, 2, 2);
   }
-
+  a:visited {
+    color: rgb(64, 2, 2);
+  }
 
   button {
     display: block;

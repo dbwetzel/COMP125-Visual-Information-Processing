@@ -3,6 +3,8 @@
 # Hello P5!
 *Getting Started with Coding in Javascript and P5*
 
+For this section of COMP 125 there is no software to install. All work can be completed using a standard web browser on nearly any web-capable device. There may be some browser compatibility issues here and there (I've seen problems for users of Safari on Mac computers, for instance), but generally, the [P5 editor] (https://editor.p5js.org) will work on any device. You will need an internet connection, but it won't need to be particularly fast for our purposes.
+
 **P5** ([P5js.org](https://p5js.org)) is based on **Processing** ([processing.org](https://processing.org)) and was designed by and for artists seeking to create data visualizations quickly and with minimal or no background in coding or computer science. In this course we will use P5 to create interactive drawings and animations that run in a web page. All our work will be online, and your animations and interactive web apps will be accessible and sharable with simple web links.
 
 P5 is a **JavaScript** library, and so to work in P5 is to work in JavaScript. Some of the work we will do in this course is specific to P5, and some of the work we will do is fundamental to the JavaScript language. 
