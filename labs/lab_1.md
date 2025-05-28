@@ -6,7 +6,7 @@
 
 Use this link to get started:
 
-* https://editor.p5js.org/dbwetzel/sketches/rAdIyonr7
+* <a href="https://editor.p5js.org/dbwetzel/sketches/rAdIyonr7" target="_blank">https://editor.p5js.org/dbwetzel/sketches/rAdIyonr7</a>
 
 In the first Lab, you created a new P5.js sketch. Credit for that lab is awarded for successfully linking a web page (index.html) to the P5.js code library and adding some JavaScript code to a connected script file (script.js). For some of you, that might have been a leap of faith already.
 
