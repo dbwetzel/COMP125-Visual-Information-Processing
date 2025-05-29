@@ -23,8 +23,3 @@ In P5, if you want to rotate and move objects independently on screen, it's real
 3. In `draw()`, call the `spin()` method for each object in the appropriate `if()` statements (each one checks to see if you clicked the mouse on a specific object)
 
 Each square should spin independently (and scale?) while you press the mouse on it.
-
-### When you're done:
-* Make sure you save your work in the P5 editor (**File->Save**)
-* Download a backup copy and submit the .zip file (**File->Download**)
-* Share a link to your sketch (**File->Share->Edit**)

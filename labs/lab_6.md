@@ -19,8 +19,3 @@ Add code to the `draw()` function (which loops) so that the spaceship moves acro
 Hint: you will need to do something to *increase* or *decrease* the value of `x` or `y` each frame.
 
 For **extra credit** (1 point), use an `if()` statement to make it wrap around to the other side of the screen when it goes off the edge.
-
-### When you're done:
-* Make sure you save your work in the P5 editor (**File->Save**)
-* Download a backup copy and submit the .zip file (**File->Download**)
-* Share a link to your sketch (**File->Share->Edit**)

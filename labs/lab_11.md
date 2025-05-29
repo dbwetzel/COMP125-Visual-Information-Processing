@@ -24,8 +24,3 @@ There is a built-in method for all arrays that will append a new element to an a
 ### Instructions
 1. Add a line of code to the `mousePressed()` function that appends a new `Dot` object to the array. There is already a line that creates a new `Dot`. Just call the array's `.push()` method with the name of the Dot object as its argument.
 2. **Add comments to each line of this sketch** explaining what is happening. Seriously, add a comment to *every line of code.*
-
-### When you're done:
-* Make sure you save your work in the P5 editor (**File->Save**)
-* Download a backup copy and submit the .zip file (**File->Download**)
-* Share a link to your sketch (**File->Share->Edit**)

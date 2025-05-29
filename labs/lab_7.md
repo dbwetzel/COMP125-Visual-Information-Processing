@@ -22,8 +22,3 @@ Modify the sketch in four ways:
 **Extra credit** (1 point each):
 * add an image to your sketch (jpg, gif, png)
 * add a sound that plays when you click the mouse
-
-### When you're done:
-* Make sure you save your work in the P5 editor (**File->Save**)
-* Download a backup copy and submit the .zip file (**File->Download**)
-* Share a link to your sketch (**File->Share->Edit**)

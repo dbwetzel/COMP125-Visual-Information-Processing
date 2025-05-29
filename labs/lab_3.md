@@ -32,8 +32,3 @@ The state of the P5 variable`mouseIsPressed` is always either `true` or `false` 
 * add some code into the `if( ){} else {}` statements to make the circle **change color when the mouse is pressed.** Your code will go between the `{ curly brackets }`
 
 * for extra credit (1pt), restructure this so that the `if()` statement also controls the value of a variable that re-sizes or moves the circle.
-
-### When you're done:
-* Make sure you save your work in the P5 editor (**File->Save**)
-* Download a backup copy and submit the .zip file (**File->Download**)
-* Share a link to your sketch (**File->Share->Edit**)
