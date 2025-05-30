@@ -1,6 +1,6 @@
 <link href="../markdown.css" rel="stylesheet"></link> 
 
-# Project 3, Part 2 - player movement
+# Project 3, Part 3 - Timers
 *Import a Player object and make it move in response to player actions*
 
 **Pick up where you left off in Part 1**
@@ -49,7 +49,7 @@
 
 ### Make it move in response to player actions
 
-> Choose your own adventure! You can make the player object move a lot of different ways, depending on how you want things to work in your own game. Below are three possible ways to control the position of `player1` in response to user actions. You will be able to choose which mode you want at any time later.
+> Choose your own adventure! You can make the player object move a lot of different ways, depending on how you want things to work in your own game. Below are three possible ways to control the position of player1 in response to user actions. You will be able to choose which mode you want at any time later.
 
 **A. Mouse following.**
 
@@ -59,11 +59,11 @@ This is the simplest way to control an object on screen. It might be right for y
 
 1. Open the file **Player.js** and scroll down to find `this.move = function(){}`.  Add the following to the `.move()` method of the Player object
 ```javascript
-    this.move = function(){
-        if(this.mode == "mouse"){
-            this.x = this.mouseX;
-        }
+this.move = function(){
+    if(this.mode == "mouse"){
+        this.x = this.mouseX;
     }
+}
 ```
 2. Go back to the file **sketch.js** and add a line to the `play()` function (after `player1.display()`):
 ```javascript
@@ -161,14 +161,12 @@ This is a little more complex, but it allows you to control player1 from the key
 
 This one is the challenge round! It isn't really that hard, but it will require just a little more work in a few different places. The basic idea is to use the LEFT and RIGHT arrow keys to rotate the sprite and use the UP and DOWN keys to accelerate and brake. The rotation not only points the sprite in a direction, but sets a direction of travel (there's a wee bit of math involved). The UP and DOWN keys just add to or subtract from a speed property of the player object. Here's how to do it:
 
-1. In `Player.js` add four new properties to the `Player()` constructor: `this.xSpeed`,  `this.ySpeed`, `this.xBrake`, and `this.yBrake`. Initialize them all to 0 (zero).
+1. In `Player.js` add two new properties to the `Player()` constructor: `this.xSpeed` and `this.ySpeed`. Initialize both to 0 (zero).
 ```javascript
     this.x = tempX; 
     this.y = tempY; 
     this.xSpeed = 0;
     this.ySpeed = 0; 
-    this.xBrake = 0;
-    this.yBrake = 0; 
     this.diam = 50;
     this.angle = 0;
     this.mode = _mode;
@@ -284,19 +282,8 @@ this.move = function(){
         this.ySpeed -= .02 * v;
     }
 ```
-> We should add a method for braking. The easiest way would be to declare a new method for `Player()` called `.brake()` and use it to simply subtract a value ("braking factor") from `.xSpeed` and `.ySpeed`. That would work, but once it slows to 0 it will start accelerating backwards. If you want to prevent that, you need to make sure it returns to 0. Also, xSpeed and ySpeed will be different values from each other. To make sure that the player comes to a smooth stop, we need to get both values to zero at the same time. We can calculate the "braking factor" based on the current speed in each direction, using P5's animation frame rate. 
-7. Add two lines to the end of `this.thrust()` to calculate the amount of speed to subtract each frame for both `xSpeed` and `ySpeed` so they both reach 0 simultaneously. The P5 function `abs()` gives the absolute value of the calculation so we don't end up subtracting a negative value (acceleration!) from our speed when we hit the brakes!
-```javascript
-    this.thrust = function(){
-        let h = Math.sin(this.angle); // calculate a percentage to the left or right
-        let v = Math.cos(this.angle); // calculate a percentage up or down
-        this.xSpeed += .02 * h; // modify the basic acceleration factor (.02) by the amount of rotation
-        this.ySpeed -= .02 * v;
-        this.xBrake = abs(this.xSpeed / frameRate()); 
-        this.yBrake = abs(this.ySpeed / frameRate());
-    }
-```
-8. In `Player.js` add a `.brake()` method to the `Player()` constructor. Be sure to add this method *inside* the `Player()` function, but *outside* any other method definitions. It should have two `if() {} else {}` pairs, one that tests `if(this.xSpeed > 0)` and one that tests `if(this.ySpeed > 0)`
+> We should add a method for braking. The easiest way would be to declare a new method for `Player()` called `.brake()` and use it to simply subtract a value ("braking factor") from `.xSpeed` and `.ySpeed`. That would work, but once it slows to 0 it will start accelerating backwards. If you want to prevent that, you need to make sure it returns to 0. Be sure to add this method *inside* the `Player()` function, but *outside* any other method definitions.
+7. In `Player.js` add a `.brake()` method to the `Player()` constructor. It should have two `if() {} else {}` pairs, one that tests `if(this.xSpeed > 0)` and one that tests `if(this.ySpeed > 0)`
 ```javascript
     function Player(tempX, tempY) {
         // properties
@@ -316,21 +303,21 @@ this.move = function(){
 
         this.brake = function() {
             if(this.xSpeed > 0) {
-                this.xSpeed -= this.xBrake; // slow down!
+                this.xSpeed -= 0.01; // slow down!
             } else {
-                this.xSpeed += this.xBrake // speed was less than 0, so bring it back up
+                this.xSpeed += 0.01 // speed was less than 0, so bring it back up
             }
             if (this.ySpeed > 0) {
-                this.ySpeed -= this.yBrake; // slow down on y axis, too!
+                this.ySpeed -= 0.01; // slow down on y axis, too!
             } else {
-                this.ySpeed += this.yBrake; // bring up to 0 if we went too far
+                this.ySpeed += 0.01; // bring up to 0 if we went too far
             }
         }
     } // end of Player() constructor
 ``` 
 > Now that we have a modified `.move()` method and new `.thrust()` and `.brake()` methods in our `Player()` constructor (and therefore our `player1` object) we can implement those features in our game! 
 
-9. change the mode of our `player1` object in `setup()`:
+8. change the mode of our player1 object in setup():
 ```javascript
     function setup() {
         createCanvas(600, 400);
