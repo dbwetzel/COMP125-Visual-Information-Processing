@@ -1,16 +1,16 @@
 <link href="../markdown.css" rel="stylesheet"></link> 
 
-# Project 3, Version 2 - player movement (NEW VERSION SP25)
+# Project 3, Part 2 - player movement
 *Import a Player object and make it move in response to player actions*
 
 **Pick up where you left off in Part 1**
-* Log in to your account in the P5 Editor (editor.p5js.org) 
+* **Log in** to your account in the P5 Editor (editor.p5js.org) 
 * find your own **Project 3** under "My Sketches." 
-* Save a new version: 
+* **Save a new version:** 
     * File -> Duplicate
     * Click on the sketch name box and change it to "Project 3 v.2 - Player movement"
 
-In this step, you will import an object constructor function contained in a separate .js file. Link this file to your sketch, create an instance of that object, and define how it's sprite moves on the canvas in response to user actions.
+>In this step, you will import an object constructor function contained in a separate .js file. Link this file to your sketch, create an instance of that object, and define how it's sprite moves on the canvas in response to user actions.
 
 ### Instructions:
 
