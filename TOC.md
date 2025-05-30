@@ -58,12 +58,13 @@ This is an introductory course in programming using the JavaScript library P5. C
         * [Project 2 - Array of Objects](projects/project_2.html)
 7. Creative Programming - a 2D Web Game
     * Problem Solving with Algorithms
-    * Game Template
-        * Start-Play-GameOver
+    * [Project 3: Web Game](projects/project_3.html)
+        * [Start-Play-GameOver](projects/project_3.1.html)
         * Player Movement
         * Timers & Additional Objects
         * Collision Detection
         * Scoring and Restarting
+        * [Grading Rubric](projects/project_3_rubric.html)
 8. Wrapping Up
     * Testing
     * Debugging and Troubleshooting
