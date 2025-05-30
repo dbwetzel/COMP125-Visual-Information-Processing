@@ -71,7 +71,7 @@ Here's where it gets interesting, so pay attention! We're going to use the `drop
         }
 ```
 
-8. In the `play()` function, check the drop timer. If the drop timer (`dropTimer`) is finished (`.isFinished()`), add a new present to the array and re-start the timer.
+8. In the `play()` function, check the drop timer. If the drop timer (`dropTimer`) is finished (`.isFinished()`), add a new present to the array and re-start the timer (`.push()` is a built-in method of Arrays in JavaScript).
 ```javascript
         if(dropTimer.isFinished()) {
             let p = new Box(random(width), -40);
