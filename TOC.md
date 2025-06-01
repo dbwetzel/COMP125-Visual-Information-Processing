@@ -17,7 +17,7 @@ This is an introductory course in programming using the JavaScript library P5. C
     * Javascript syntax and program structure
     * [Variables](lessons/part_2/variables.html)
     * [Interaction & Conditional Statements](lessons/part_2/conditionals.html) 
-    * Loops
+    * [Loops](lessons/part_2/loops.html)
     * Assignments:
         * [lab 2 - variables](labs/lab_2.html)
         * [lab 3 - interaction](labs/lab_3.html)
