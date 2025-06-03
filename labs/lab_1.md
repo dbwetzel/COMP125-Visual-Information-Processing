@@ -7,8 +7,10 @@
 Use this link to get started:
 
 * <a href="https://editor.p5js.org/dbwetzel/sketches/rAdIyonr7" target="_blank">https://editor.p5js.org/dbwetzel/sketches/rAdIyonr7</a>
+* **Log in** to the P5 editor (editor.p5js.org)
+* **Save** your own copy (File->Duplicate)
 
-In the first Lab, you created a new P5.js sketch. Credit for that lab is awarded for successfully linking a web page (index.html) to the P5.js code library and adding some JavaScript code to a connected script file (script.js). For some of you, that might have been a leap of faith already.
+In the first Lab (Lab 0), you created a new P5.js sketch. Credit for that lab is awarded for successfully linking a web page (index.html) to the P5.js code library and adding some JavaScript code to a connected script file (script.js). For some of you, that might have been a leap of faith already.
 
 Now it's time to actually write some original code that will generate your own graphics in a browser window! You should carefully read **Chapter 3 - Draw** in McCarthy, et al: *Make: Getting Started with P5.js.* Consider using this lab as a place to try out some of the examples in chapter 3.
 
