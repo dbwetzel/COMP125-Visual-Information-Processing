@@ -24,9 +24,7 @@ This is an introductory course in programming using the JavaScript library P5. C
         * [lab 4 - `for()` loop](labs/lab_4.html)
         * [Project 1 - Sprite Image](projects/project_1.html)
 3. Designing a "Sprite" in P5
-    * Matrix layers with `push()` and `pop()`
-    * Translation - repositioning a complex image on the canvas
-    * Rotation and Scaling
+    * [Translation Rotation and Scaling](lessons/part_3/translation.html)
     * Motion
     * Assignments:
         * [lab 5 - translation](labs/lab_5.html)
