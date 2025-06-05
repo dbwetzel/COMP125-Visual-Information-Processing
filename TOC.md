@@ -31,7 +31,7 @@ This is an introductory course in programming using the JavaScript library P5. C
         * [lab 6 - motion](labs/lab_6.html)
         * [Project 1 - Sprite Image](projects/project_1.html)
 4. Make it interesting with extra features
-    * Text
+    * [Text](lessons/part_3/text.html)
     * Images
     * Sounds
     * Assignments:
