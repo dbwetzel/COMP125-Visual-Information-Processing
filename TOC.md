@@ -25,7 +25,7 @@ This is an introductory course in programming using the JavaScript library P5. C
         * [Project 1 - Sprite Image](projects/project_1.html)
 3. Designing a "Sprite" in P5
     * [Translation Rotation and Scaling](lessons/part_3/translation.html)
-    * Motion
+    * [Motion](lessons/part_3/motion.html)
     * Assignments:
         * [lab 5 - translation](labs/lab_5.html)
         * [lab 6 - motion](labs/lab_6.html)
