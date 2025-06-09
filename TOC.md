@@ -37,8 +37,8 @@ This is an introductory course in programming using the JavaScript library P5. C
     * Assignments:
         * [lab 7 - text, images, and sound](labs/lab_7.html)
 5. Encapsulation
-    * Funcitons
-    * Objects
+    * [Functions](lessons/part_5/functions.html)
+    * [Objects](lessons/part_5/objects.html)
     * Classes and Constructors
     * Your Sprite as an Object
     * Assignments:
