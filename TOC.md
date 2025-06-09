@@ -14,7 +14,7 @@ This is an introductory course in programming using the JavaScript library P5. C
         * [Lab 0 - Setup](labs/lab_0.html)
         * [lab 1 - Draw](labs/lab_1.html)
 2. Some Basic Programming Techniques
-    * Javascript syntax and program structure
+    * [Javascript syntax and program structure](lessons/part_2/structure.html)
     * [Variables](lessons/part_2/variables.html)
     * [Interaction & Conditional Statements](lessons/part_2/conditionals.html) 
     * [Loops](lessons/part_2/loops.html)
