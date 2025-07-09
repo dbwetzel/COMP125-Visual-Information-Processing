@@ -62,7 +62,7 @@ This is the simplest way to control an object on screen. It might be right for y
 ```javascript
     this.move = function(){
         if(this.mode == "mouse"){
-            this.x = this.mouseX;
+            this.x = mouseX;
         }
     }
 ```
