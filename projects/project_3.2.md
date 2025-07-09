@@ -77,12 +77,13 @@ This is the simplest way to control an object on screen. It might be right for y
 
 This is a little more complex, but it allows you to control player1 from the keyboard with the arrow keys (or any other set of keys you like).
 
-1. Edit Player.js (sketch files->Player.js) to add an `else if()` condition after the `if()` statement (from **Step A**, above) in the `move()` method. This time we're looking for the "mode" property value of` "jump"`. Also, we *only* want to activate this block if the mouse is pressed (`mouseIsPressed == true`). We use the "logical AND" operator (`&&`) to check that BOTH conditions are true.
+1. Edit Player.js (sketch files->Player.js) to add an `else if()` condition after the `if()` statement (from **Step A**, above) in the `move()` method. This time we're looking for the "mode" property value of` "jump"`. Also, we *only* want to activate this block if a key is pressed (`keyIsPressed == true`). We use the "logical AND" operator (`&&`) to check that BOTH conditions are true.
 ```javascript
     this.move = function(){
         if(this.mode == "mouse"){
             this.x = this.mouseX;
-        } else if(this.mode == "jump" && mouseIsPressed){
+        } // end of mouse mode
+        else if(this.mode == "jump" && keyIsPressed){
 
         }
     }
@@ -94,7 +95,8 @@ This is a little more complex, but it allows you to control player1 from the key
     this.move = function(){
         if(this.mode == "mouse"){
             this.x = this.mouseX;
-        } else if(this.mode == "jump" && keyIsPressed){
+        } // end of mouse mode
+        else if(this.mode == "jump" && keyIsPressed){
             if(frameCount % 10 == 0){
                // this block only executes on every tenth frame
                // and only in "jump" mode with a key pressed​​​​​​
@@ -107,7 +109,8 @@ This is a little more complex, but it allows you to control player1 from the key
     this.move = function(){
         if(this.mode == "mouse"){
             this.x = this.mouseX;
-        } else if (this.mode == "jump" && keyIsPressed){
+        } // end of mouse mode
+        else if (this.mode == "jump" && keyIsPressed){
             if(frameCount % 10 == 0){
                 switch(keyCode) {
                    case UP_ARROW : 
@@ -162,7 +165,7 @@ This is a little more complex, but it allows you to control player1 from the key
 
 This one is the challenge round! It isn't really that hard, but it will require just a little more work in a few different places. The basic idea is to use the LEFT and RIGHT arrow keys to rotate the sprite and use the UP and DOWN keys to accelerate and brake. The rotation not only points the sprite in a direction, but sets a direction of travel (there's a wee bit of math involved). The UP and DOWN keys just add to or subtract from a speed property of the player object. Here's how to do it:
 
-1. In `Player.js` add four new properties to the `Player()` constructor: `this.xSpeed`,  `this.ySpeed`, `this.xBrake`, and `this.yBrake`. Initialize them all to 0 (zero).
+1. In `Player.js` add four new properties to the `Player()` constructor: `this.xSpeed`,  `this.ySpeed`, `this.xBrake`, and `this.yBrake`. Initialize them all to 0 (zero). If those already exist, take note of their initial values.
 ```javascript
     this.x = tempX; 
     this.y = tempY; 
@@ -179,14 +182,15 @@ This one is the challenge round! It isn't really that hard, but it will require 
     this.move = function(){
         if(this.mode == "mouse"){
             this.x = this.mouseX;
-        } else if(this.mode == "jump" && keyIsPressed){
+        } // end of mouse mode
+        else if(this.mode == "jump" && keyIsPressed){
             if(frameCount % 10 == 0){
                 switch(keyCode) { ... } // end of switch statement
             } // end of if(frameCount % 10 == 0)
         } // end of if else (this.mode == "jump" && keyIsPressed)
         else if(this.mode == "rocket") {
-
-        }
+ 
+        } // end of rocket mode
     } // end of .move() method
 ```
 
@@ -209,7 +213,7 @@ This one is the challenge round! It isn't really that hard, but it will require 
             if(this.y > height || this.y < 0) {
                 this.y = abs(this.y - height); // wrap around vertically
             }
-        }
+        } // end of rocket mode
     } // end of .move() method
 ```
 > However, the `player1` object won't move until we do something to affect the values of `.xSpeed` and `.ySpeed` (initialized to 0).  Here we will first check for `keyIsPressed` and pass the `keyCode` to a `switch()` statement, like the one we used in the `"jump"` mode. This one, however, will use the `LEFT_ARROW` to rotate left, the `RIGHT_ARROW` to rotate right, the `UP_ARROW` to accelerate, and the `DOWN_ARROW` to brake.
@@ -248,7 +252,7 @@ this.move = function(){
               break;
           } // end of switch()
        } // end of if(keyIsPressed)
-    } // end of "rocket" mode
+    } // end of rocket mode
 } // end of .move() method
 ```
 >**Note:** The `UP_ARROW` case calls the method `this.thrust()` and the `DOWN_ARROW` case calls `this.brake()`. These methods don't exist yet in the `Player()` constructor, so we need to add them. Let's start with the acceleration.
@@ -326,7 +330,7 @@ this.move = function(){
             } else {
                 this.ySpeed += this.yBrake; // bring up to 0 if we went too far
             }
-        }
+        } // end of brake() function
     } // end of Player() constructor
 ``` 
 > Now that we have a modified `.move()` method and new `.thrust()` and `.brake()` methods in our `Player()` constructor (and therefore our `player1` object) we can implement those features in our game! 
