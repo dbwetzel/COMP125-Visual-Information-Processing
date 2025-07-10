@@ -218,7 +218,7 @@ This one is the challenge round! It isn't really that hard, but it will require 
 ```
 > However, the `player1` object won't move until we do something to affect the values of `.xSpeed` and `.ySpeed` (initialized to 0).  Here we will first check for `keyIsPressed` and pass the `keyCode` to a `switch()` statement, like the one we used in the `"jump"` mode. This one, however, will use the `LEFT_ARROW` to rotate left, the `RIGHT_ARROW` to rotate right, the `UP_ARROW` to accelerate, and the `DOWN_ARROW` to brake.
 
-4. After the code that moves player1 in "rocket" mode (step 3 above), add an `if()` statement that tests `mouseIsDown`. Inside the if() statement's curly brackets (`{ }`) add a `switch()` statement that tests the P5 variable `keyCode`. 
+4. After the code that moves player1 in "rocket" mode (step 3 above), add an `if()` statement that tests `keyIsPressed`. Inside the if() statement's curly brackets (`{ }`) add a `switch()` statement that tests the P5 variable `keyCode`. 
 ```javascript
 this.move = function(){
     if(this.mode == "mouse"){ ... }
