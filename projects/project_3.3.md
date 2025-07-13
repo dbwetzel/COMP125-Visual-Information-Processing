@@ -16,7 +16,7 @@
 
 1. Add the file `Timer.js` to your project
 
-    * **Download** the "Project_3_Files.zip" archive (then look for it in your Downloads folder)
+    * **Download** the "<a href = "Project_3_Files.zip">Project_3_Files.zip</a>" archive (then look for it in your Downloads folder)
     * **Extract** the .zip archive (on Mac, double-click the .zip file, on Windows, right click and choose "Extract All")
     * **Upload** the file "Player.js" to your project.
         * Open the sketch file explorer in the P5 Editor (there is a '>' button next the the file name in the top left of the editor window. Click it to open the file explorer).
