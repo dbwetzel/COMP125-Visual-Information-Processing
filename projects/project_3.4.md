@@ -126,21 +126,13 @@ So far, the `play()` screen continuously adds `Box` objects to the '`presents`' 
 11. Last step: Collision Detection!
     * Add one more task to the `for()` loop. Since we are already looking at each object in the presents array (one per iteration of the loop), we can take a moment to compare their positions to the position of `player1`.
     * If they are close enough together, we can call it a "collision" and take some action. Let's use the .splice() method again to simply remove the object from the array when it collides with the player1 object.
-    * First, compare locations using the P5 `dist()` function and store its result temporarily in a variable:
+    * First, compare locations using the P5 `dist()` function and store its result temporarily in a variable (`d`). Add this *above* the if() statement from step 10:
     ```javascript
         let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
     ```
-    * next, set up a conditional statement to see if the result of the `dist()` function meets our criteria for a collision:
+    * next, add an alternative condition to the if() statement from step 10 (above) to see if the result of the `dist()` function meets our criteria for a collision. Use the logical OR operator ('`||`') to remove the box if it wen too far OR if it intersects with the Player:
     ```javascript
-        if (d < 50) {
-            // if it's within 50 pixels, do something!
-        }
-    ```
-    * finally, let's use this condition to remove the object from the array (because the player object intersected with it)
-    ```javascript
-        if (d < 50) {
-            presents.splice(i, 1); // remove 1 item at index 'i'
-        }
+ 
     ```
     ... the `for()` loop in `play()` should look like this now:
     ```javascript
@@ -150,14 +142,13 @@ So far, the `play()` screen continuously adds `Box` objects to the '`presents`' 
             presents[i].move(); // make it fall
             presents[i].spin(); // make it spin
 
-            if(presents[i].y > height) {
-                // present went below the canvas
+            let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
+
+            if(presents[i].y > height || d < 50) {
+                // present went below the canvas OR caught by player1
                 presents.splice(i, 1); // remove from array
             }
-            let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
-            if (d < 50) {
-                presents.splice(i, 1); // remove 1 item at index 'i'
-            }
+
         }
     ```
 > Go ahead and Run your project. Look for error messages in the Console. Can you move your player object into position so that it intersects with a falling present? What happens when they cross paths? Does the present disappear?
