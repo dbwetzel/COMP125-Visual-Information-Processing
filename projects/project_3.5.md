@@ -24,13 +24,27 @@
     * At the bottom of your `play()` function, you should have a couple lines of code that display the elapsed time on the game timer (`timer.elapsedTime`).
     ```javascript
         textAlign(LEFT);
-        text("Elapsed time: " + timer.elapsedTime, 20, 20); //show elapsed time in ms
+        text("Elapsed time: " + gameTimer.elapsedTime, 20, 100); //show elapsed time in ms
+    ```
+    ... let's scooch it up a bit to make room (20px from the top):
+    ```javascript
+        textAlign(LEFT);
+        text("Elapsed time: " + gameTimer.elapsedTime, 20, 30); //show elapsed time in ms
     ```
     ... add a line below that to show the score on screen as well:
     ```javascript
-        text("Score: " + score, 20, 40);
+        text("Score: " + score, 20, 50);
     ```
     > If you run your sketch, you should see the score at the top left corner of the canvas. However, it won't change until we program it to do so.
+
+    > **N.B.** If you want to make the game timer look better, we could make it count down instead. Take the .time property and subtract the .elapsedTime. Also, lets round it (`round()` is a built-in P5 function) and display it as seconds (divide milliseconds by 1000):
+        ```javascript
+        textAlign(LEFT);
+        let s = round(gameTimer.time - gameTimer.elapsedTime)/1000;
+        text("Time remaining: " + s, 20, 100); //show time remaining in seconds
+        text("Score: " + score, 20, 50);
+    ```
+
 
 When the player intersects with a box object in the `presents` array, the box is removed. You can find that moment in the `play()` function inside the `for()` loop that moves (`.move()`) and displays (`.display()`) all the `presents` and disposes of them if they reach the bottom or intersect with `player1`. It should look like this:
 ```javascript
@@ -39,39 +53,61 @@ When the player intersects with a box object in the `presents` array, the box is
         presents[i].move();
         presents[i].spin();
 
-        if (presents[i].y > height) {
+        let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
+        // d is the distance in pixels between presents[i] and player1
+
+        if (presents[i].y > height || d < 50) {
             presents.splice(i, 1); // remove from array
         }
 
-        let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
-        // d is now the distance in pixels between presents[i] and player1
-        if (d < 50) {
-            presents.splice(i, 1); // remove the present from the array
-        }
     } // end of for() loop
 ```
-3. In the `if()` statement that compares the distance between the present and the player to a set radius (`if(d < 50)`), add a line that increments the score (`score++`). It should look like this:
+3. After the line that calculates the value of `d`, add a new `if()` statement it to a set radius (`if(d < 50)`). If that statement is true, increment the score by 1:
 ```javascript
-    if (d < 50) {
-        presents.splice(i, 1);
-        score ++; // add 1 point!
-    }
+    for (let i = 0; i < presents.length; i++) {
+        presents[i].display();
+        presents[i].move();
+        presents[i].spin();
+
+        let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
+        // d is the distance in pixels between presents[i] and player1
+
+        if (d < 50) {
+            score ++; // add 1 point!
+        }
+
+        if (presents[i].y > height || d < 50) {
+            presents.splice(i, 1); // remove from array
+        }
+
+    } // end of for() loop
 ```
 > Run your sketch again and see if your scoring mechanism is working. If you have collision detection set up properly (from Part 4) and you got this far it should be working. Each time you catch a falling present, you should get a point and it should show up on screen in the top left corner. Working? Yay! 
 
-What if you miss one and it gets by you? There is an `if()` statement in the `for()` loop in `play()` that already handles that situation.
+4. What if you miss one and it gets by you? Add another `if()` statement in the `for()` loop in `play()` to handle that situation:
 ```javascript
-    if(presents[i].y > height){
-        presents.splice(i, 1); // remove 1 element at index 'i' from the array
-    }
+    for (let i = 0; i < presents.length; i++) {
+        presents[i].display();
+        presents[i].move();
+        presents[i].spin();
+
+        let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
+        // d is the distance in pixels between presents[i] and player1
+
+        if (d < 50) {
+            score ++; // add 1 point!
+        }
+        if(presents[i].y > height){
+            score --; // remove 1 point
+        }
+        if (presents[i].y > height || d < 50) {
+            presents.splice(i, 1); // remove from array
+        }
+
+    } // end of for() loop
+
 ```
-4. Add a line to that block that takes one point away from the total (`score--`):
-```javascript
-    if(presents[i].y > height){
-        presents.splice(i, 1); // remove 1 element at index 'i' from the array
-        score--; // decrement score by 1
-    }
-```
+
 > Run your game and let a few presents go by. You should see the score going down. When you catch one it goes back up again!
 
 For now, the game ends when the timer goes off. You may want to change that behavior later, but let's leave it for now. However, it would be nice to know what your score was when the game ended. We should also reset it when you start the game again. 
