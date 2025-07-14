@@ -38,29 +38,27 @@
     > If you run your sketch, you should see the score at the top left corner of the canvas. However, it won't change until we program it to do so.
 
     > **N.B.** If you want to make the game timer look better, we could make it count down instead. Take the .time property and subtract the .elapsedTime. Also, lets round it (`round()` is a built-in P5 function) and display it as seconds (divide milliseconds by 1000):
-        ```javascript
+    ```javascript
         textAlign(LEFT);
         let s = round(gameTimer.time - gameTimer.elapsedTime)/1000;
         text("Time remaining: " + s, 20, 100); //show time remaining in seconds
         text("Score: " + score, 20, 50);
     ```
-
-
 When the player intersects with a box object in the `presents` array, the box is removed. You can find that moment in the `play()` function inside the `for()` loop that moves (`.move()`) and displays (`.display()`) all the `presents` and disposes of them if they reach the bottom or intersect with `player1`. It should look like this:
 ```javascript
-    for (let i = 0; i < presents.length; i++) {
-        presents[i].display();
-        presents[i].move();
-        presents[i].spin();
+        for (let i = 0; i < presents.length; i++) {
+            presents[i].display();
+            presents[i].move();
+            presents[i].spin();
 
-        let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
-        // d is the distance in pixels between presents[i] and player1
+            let d = dist(presents[i].x, presents[i].y, player1.x, player1.y);
+            // d is the distance in pixels between presents[i] and player1
 
-        if (presents[i].y > height || d < 50) {
-            presents.splice(i, 1); // remove from array
-        }
+            if (presents[i].y > height || d < 50) {
+                presents.splice(i, 1); // remove from array
+            }
 
-    } // end of for() loop
+        } // end of for() loop
 ```
 3. After the line that calculates the value of `d`, add a new `if()` statement it to a set radius (`if(d < 50)`). If that statement is true, increment the score by 1:
 ```javascript
@@ -105,19 +103,17 @@ When the player intersects with a box object in the `presents` array, the box is
         }
 
     } // end of for() loop
-
 ```
-
 > Run your game and let a few presents go by. You should see the score going down. When you catch one it goes back up again!
 
-For now, the game ends when the timer goes off. You may want to change that behavior later, but let's leave it for now. However, it would be nice to know what your score was when the game ended. We should also reset it when you start the game again. 
+The game ends when the timer goes off. You may want to change that behavior later, but let's leave it for now. However, it would be nice to know what your score was when the game ended. We should also reset it when you start the game again. 
 
-5. First, let's show the final score on the `gameOver` screen. 
-    * In the `gameOver()` function, add a line at the end that displays your score:
+5. First, let's show the final score on the `gameOver` screen. In the `gameOver()` function, add a line at the end that displays your score:
     ```javascript
         text("Your final score: " + score, width/2, height * 2/3);
     ```
     > ... and run your project again. You should see your final score displayed on the Game Over screen. However, if you start the game again, your score will pick up where you left off. If you want it to start again a 0, we have to re-initialize it to 0 (zero).
+
 
 6. Scroll down to where you find the `mousePressed()` function. There is a conditional statement that checks to see if `gameState` is `"splash"` when the mouse is clicked. We're already using that to start the game and its timers. It should look like this:
     ```javascript
@@ -126,9 +122,10 @@ For now, the game ends when the timer goes off. You may want to change that beha
             timer.start(); // start the game timer
             dropTimer.start();
         }
-    ```
-    * add a line after `dropTimer.start();` that will reset the score to 0. Then add lines to re-initialize the `player1` object and the `presents` array. Like so:
-    ```javascript
+     ```
+ ... add a line after `dropTimer.start();` that will reset the score to 0. Then add lines to re-initialize the `player1` object and the `presents` array. Like so:
+ 
+```javascript
         if (gameState == "splash") {
             gameState = "play";
             timer.start(); // start the game timer
@@ -138,7 +135,7 @@ For now, the game ends when the timer goes off. You may want to change that beha
             // set the last argument to "mouse" "jump" or "rocket" depending on your preference
             presents = new Array(0); // replace the presents array with a new empty one
         }
-    ```
+```
 
 Go ahead and **Run** your project.
 
