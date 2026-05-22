@@ -1,6 +1,10 @@
 <link href="markdown.css" rel="stylesheet"></link> 
 
-# Visual Information Processing
+# COMP 125 - Visual Information Processing
+
+*Dr. David B Wetzel* </br>
+*Loyola University Chicago*
+
 ## Table of Contents
 
 This is an introductory course in programming using the JavaScript library P5. Coding assignments should be done using the free code editor at <a href="https://editor.p5js.org" target="_blank">editor.p5js.org</a>
@@ -38,9 +42,11 @@ This is an introductory course in programming using the JavaScript library P5. C
         * [lab 7 - text, images, and sound](labs/lab_7.html)
 5. Encapsulation
     * [Functions](lessons/part_5/functions.html)
-    * [Objects](lessons/part_5/objects.html)
-    * Classes and Constructors
-    * Your Sprite as an Object
+    * [Object Oriented Programming (OOP)](lessons/part_5/oop.html)
+        * [Object Literals](lessons/part_5/objects.html)
+        * Object Instances
+        * Classes and Constructors
+        * Your Sprite as an Object
     * Assignments:
         * [lab 8 - functions](labs/lab_8.html)
         * [lab 9 - object instances](labs/lab_9.html)
