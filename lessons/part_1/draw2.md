@@ -1,7 +1,7 @@
 <link href="../../markdown.css" rel="stylesheet"></link> 
 
-# You Can Do This!
-*Drawing with simple shapes*
+# Anyone Can Draw!
+*You Can Do This!*
 
 In May of 2022, I had the opportunity to visit the Eric Carle Museum of Picture Book Art in Amherst, MA. They had a special exhibit on the work of my early childhood hero, Ed Emberley, author of numerous "how-to-draw" books based on simple shapes and step-by-step instructions. From these books, anyone can learn to draw thousands of different animals, objects, and characters without the burden of "knowing" how to draw or having "artistic talent." For me around age five, these books were foundational. I was that kid who would sit and draw the same pictures over and over, for hours. Emberley's books were the key to a universe of drawing that made sense.
 

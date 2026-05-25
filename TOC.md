@@ -14,6 +14,7 @@ This is an introductory course in programming using the JavaScript library P5. C
     * [Hello P5!](lessons/part_1/hello_p5.html)
     * [Setup](lessons/part_1/setup.html) (before you begin)
     * [Draw](lessons/part_1/draw.html) (basic shapes on a web canvas)
+    * [Anyone Can Draw!](lessons/part_1/draw2.html) (Drawing Animals)
     * Assignments:
         * [Lab 0 - Setup](labs/lab_0.html)
         * [lab 1 - Draw](labs/lab_1.html)
